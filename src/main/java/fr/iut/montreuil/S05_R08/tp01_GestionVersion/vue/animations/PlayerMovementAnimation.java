@@ -22,13 +22,13 @@ public class PlayerMovementAnimation {
         });*/
         joueur.directionProperty().addListener(e -> {
             if (joueur.getDirection().equals("up"))
-                playerImage.setImage(imageMap.getImage("playerUP"));
+                playerImage.setImage(imageMap.getImage("ramboUP"));
             else if(joueur.getDirection().equals("down"))
-                playerImage.setImage(imageMap.getImage("playerDOWN"));
+                playerImage.setImage(imageMap.getImage("ramboDOWN"));
             else if(joueur.getDirection().equals("right"))
-                playerImage.setImage(imageMap.getImage("playerRIGHT"));
+                playerImage.setImage(imageMap.getImage("ramboRIGHT"));
             else
-                playerImage.setImage(imageMap.getImage("playerLEFT"));
+                playerImage.setImage(imageMap.getImage("ramboLEFT"));
         });
     }
 
