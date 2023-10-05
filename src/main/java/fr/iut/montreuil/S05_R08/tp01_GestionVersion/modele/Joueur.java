@@ -29,6 +29,7 @@ public class Joueur {
     private IntegerProperty maxHP = new SimpleIntegerProperty();
     private IntegerProperty niveau;
     private QuestLine listeQuetes;
+    private int nbPas;
 
     public Joueur(int x, int y, Terrain zone) {
         arme = new Gourdin(); // Le joueur commence avec un gourdin
@@ -42,13 +43,24 @@ public class Joueur {
         niveau = new SimpleIntegerProperty(1);
         this.inventaire = new Inventaire();
         this.listeQuetes = new QuestLine(this);
+        this.nbPas = 0;
     }
 
     public ArmeDistance getArmeDistance() {
         return armeDistance;
     }
+    
+    
 
-    public Arme getArme() {
+    public void incrementerCompteurPas() {
+		 this.nbPas ++;
+	}
+
+	public void setNbPas(int nbPas) {
+		this.nbPas = nbPas;
+	}
+
+	public Arme getArme() {
         return arme;
     }
 
@@ -57,11 +69,26 @@ public class Joueur {
     }
 
     public void lvlUp(){
-        SoundPlayer.playerLevelUp();
-        niveau.setValue(niveau.getValue()+1);
-        maxHP.setValue(maxHP.getValue()+5);
-        hp.setValue(maxHP.getValue());
-        console.afficherLvlUp();
+    	boolean payeOuSouffre = false;
+    	if (this.nbPas >= 5000) {
+    		payeOuSouffre = true;
+    		this.nbPas  = 0;
+    	}
+    	else if(getInventaire().getNbrOr() >= 50) {
+            getInventaire().setNbrOr(getInventaire().getNbrOr() - 50);
+            payeOuSouffre = true;
+        }
+    	if(payeOuSouffre) {
+    		SoundPlayer.playerLevelUp();
+            niveau.setValue(niveau.getValue()+1);
+            maxHP.setValue(maxHP.getValue()+5);
+            hp.setValue(maxHP.getValue());
+            console.afficherLvlUp();
+    	}
+        else{
+            getConsole().afficherArgentManquant();
+        }
+        
     }
 
     public void setArmeDistance(ArmeDistance armeDistance) {
@@ -142,21 +169,25 @@ public class Joueur {
     public void moveUp () {
         this.yProperty.setValue(this.yProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("up");
+        this.incrementerCompteurPas();
     }
 
     public void moveDown () {
         this.yProperty.setValue(this.yProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("down");
+        this.incrementerCompteurPas();
     }
 
     public void moveRight () {
         this.xProperty.setValue(this.xProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("right");
+        this.incrementerCompteurPas();
     }
 
     public void moveLeft () {
         this.xProperty.setValue(this.xProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("left");
+        this.incrementerCompteurPas();
     }
 
     public QuestLine getListeQuetes() {
