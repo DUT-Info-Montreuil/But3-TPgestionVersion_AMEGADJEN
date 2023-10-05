@@ -71,7 +71,7 @@ public class Pnj extends Acteur {
                 lines.add("Maître m'a parlé de vous, vous êtes à la recherche de réponses ?");
                 break;
             case "spectre":
-            	lines.add("Je pense que si on respect la qualite du dev, comme nos étudiants de 1ere année de DUT de 2021, on peut produire de très beaux projets, comme celui ci !");
+            	lines.add("Si vous voulez monter de niveau vous devez gagner l'expérience requise, et avoir parcourue au moins 5000 pas depuis le dernire level up ou payer 50$");
             	lines.add("Je pense que si on respect la qualite du dev, comme nos étudiants de 1ere année de DUT de 2021, on peut produire de très beaux projets, comme celui ci !");
                 lines.add("Vous savez...ce jeu réalisé en 2 mois est très bien fait. Par exemple j ai plusieurs répliques, vous devriez insister un peu...");
                 lines.add("Vous savez...ce jeu réalisé en 2 mois est très bien fait. Par exemple j ai plusieurs répliques, vous devriez insister un peu...");
