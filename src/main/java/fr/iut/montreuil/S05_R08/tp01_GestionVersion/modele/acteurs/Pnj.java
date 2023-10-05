@@ -127,6 +127,9 @@ public class Pnj extends Acteur {
                 lines.add("Il a oublié son chapeau! Ya! ");
                 break;
             case "panneau":
+            	lines.add("Il est fou Afflelou, il est fou !");
+            	lines.add("What Else");
+            	lines.add("Parce que nous le valons bien");
                 lines.add("Trésor très précieux, ne pas toucher");
                 lines.add("Dur dur la vie de panneau...");
                 lines.add("Le 'Une pièce'... Il existe!");
