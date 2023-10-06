@@ -72,7 +72,7 @@
                      </image>
                   </ImageView>
                   <Label fx:id="questTitle" alignment="TOP_CENTER" layoutX="62.0" layoutY="108.0" prefHeight="41.0" prefWidth="125.0" text="Titre" textAlignment="CENTER" wrapText="true" />
-                  <Text fx:id="questDescription" layoutX="68.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="content" textAlignment="CENTER" wrappingWidth="112.80337524414062">
+                  <Text fx:id="questDescription" layoutX="68.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="contenue" textAlignment="CENTER" wrappingWidth="112.80337524414062">
                      <font>
                         <Font name="Arial" size="10.0" />
                      </font>
@@ -361,7 +361,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="58.0" prefWidth="154.0" style="-fx-border-color: #ddab71; -fx-border-radius: 15px;" text="Inventory" textAlignment="CENTER" textFill="#ddab71" wrapText="true">
+                  <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="89.0" prefHeight="58.0" prefWidth="154.0" style="-fx-border-color: #ddab71; -fx-border-radius: 15px;" text="Inventaire" textAlignment="CENTER" textFill="#ddab71" wrapText="true">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>
@@ -1188,7 +1188,7 @@
                         <Image url="@../ressources/ennemis/boss.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" layoutX="7.0" layoutY="417.0" prefHeight="59.0" prefWidth="855.0" text="GOTY Edition 2023" textFill="#f8f2c5">
+                  <Label alignment="CENTER" layoutX="7.0" layoutY="417.0" prefHeight="59.0" prefWidth="855.0" text="Edition GOTY 2023" textFill="#f8f2c5">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -1227,7 +1227,7 @@
                                     <Insets top="-40.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER" prefHeight="43.0" prefWidth="898.0" text="A creation of BLADE corporation - Maven Edition Hacked By J.Marcinkowski" textFill="#c39d60">
+                              <Label alignment="CENTER" prefHeight="43.0" prefWidth="898.0" text="Une création de la BLADE corporation - Une édition Maven  Hacké par J.Marcinkowski" textFill="#c39d60">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
